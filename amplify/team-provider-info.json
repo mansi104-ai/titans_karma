@@ -21,6 +21,9 @@
           "appId": "d2nc0o1mnfsgg2",
           "type": "cicd"
         }
+      },
+      "api": {
+        "karmaapp": {}
       }
     }
   }
