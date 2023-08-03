@@ -1,64 +1,113 @@
 import 'package:flutter/material.dart';
+// main.dart
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_authenticator/amplify_authenticator.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:flutter/material.dart';
+import 'home.dart'; // Import the home.dart file
+import 'amplifyconfiguration.dart';
 
-void main() => runApp(ProductivityApp());
+void main() {
+  runApp(MyApp());
+}
 
-class ProductivityApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: MainScreen(),
+      routes: {
+        '/home': (context) => Home(),
+      },
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  final String userName = "Gopal Verma";
-  final String avatarImageURL =
-      "https://example.com/avatar.jpg"; // Replace with the actual URL
-
+class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          // Navigation Bar
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
-            color: Colors.blue,
-            child: Row(
+      appBar: AppBar(
+        title: Text('Main Screen'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/screen1');
+              },
+              child: Text('Go to Screen 1'),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/screen2');
+              },
+              child: Text('Go to Screen 2'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    _configureAmplify();
+  }
+
+  void _configureAmplify() async {
+    try {
+      await Amplify.addPlugin(AmplifyAuthCognito());
+      await Amplify.configure(amplifyconfig);
+      safePrint('Successfully configured');
+    } on Exception catch (e) {
+      safePrint('Error configuring Amplify: $e');
+    }
+  }
+
+  // Function to navigate to the HomeScreen
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Authenticator(
+      child: MaterialApp(
+        builder: Authenticator.builder(),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Main Screen'),
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Welcome Text
-                Text(
-                  "WELCOME",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                // Spacer to push the Avatar to the right
-                Spacer(),
-                // User Name
-                Text(
-                  userName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                  ),
-                ),
-                // Avatar
-                CircleAvatar(
-                  radius: 24.0,
-                  backgroundImage: NetworkImage(avatarImageURL), // Load image from URL
+                Text('You are logged in!'),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: _goToHomeScreen, // Call the function to navigate
+                  child: Text('Go to Home Screen'),
                 ),
               ],
             ),
           ),
-          // Add other widgets for the main content of the home screen below
-          // ...
-          
-        ],
+        ),
       ),
     );
   }
