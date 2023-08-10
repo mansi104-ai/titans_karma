@@ -1,7 +1,7 @@
-import 'package:karma/components/filled_outline_button.dart';
-import 'package:karma/constants.dart';
-import 'package:karma/models/Chat.dart';
-import 'package:karma/screens/messages/message_screen.dart';
+import 'package:karma_app/components/filled_outline_button.dart';
+import 'package:karma_app/constants.dart';
+import 'package:karma_app/models/Chat.dart';
+import 'package:karma_app/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_card.dart';

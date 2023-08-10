@@ -1,5 +1,5 @@
-import 'package:karma/constants.dart';
-import 'package:karma/screens/signinorsignup/signin_or_signup_screen.dart';
+import 'package:karma_app/constants.dart';
+import 'package:karma_app/screens/signinorsignup/signin_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {

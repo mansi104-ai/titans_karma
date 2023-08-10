@@ -1,4 +1,4 @@
-import 'package:karma/constants.dart';
+import 'package:karma_app/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';

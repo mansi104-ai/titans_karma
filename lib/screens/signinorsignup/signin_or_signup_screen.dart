@@ -1,6 +1,6 @@
-import 'package:karma/components/primary_button.dart';
-import 'package:karma/constants.dart';
-import 'package:karma/screens/chats/chats_screen.dart';
+import 'package:karma_app/components/primary_button.dart';
+import 'package:karma_app/constants.dart';
+import 'package:karma_app/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {

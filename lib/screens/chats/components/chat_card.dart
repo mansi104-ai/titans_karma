@@ -1,4 +1,4 @@
-import 'package:karma/models/Chat.dart';
+import 'package:karma_app/models/Chat.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';

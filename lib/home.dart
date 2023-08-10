@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'amplifyconfiguration.dart';
+import 'package:karma_app/amplifyconfiguration.dart';
 import 'package:amplify_flutter/amplify.dart';
 
 

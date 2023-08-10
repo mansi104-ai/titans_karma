@@ -12,8 +12,8 @@ import 'amplifyconfiguration.dart';
 
 // Generated in previous step
 //import 'models/ModelProvider.dart';
-import 'package:karma/screens/welcome/welcome_screen.dart';
-import 'package:karma/theme.dart';
+import 'package:karma_app/screens/welcome/welcome_screen.dart';
+import 'package:karma_app/theme.dart';
 
 void main() {
   runApp(const MyApp());

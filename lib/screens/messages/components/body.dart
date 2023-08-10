@@ -1,5 +1,5 @@
-import 'package:karma/constants.dart';
-import 'package:karma/models/ChatMessage.dart';
+import 'package:karma_app/constants.dart';
+import 'package:karma_app/models/ChatMessage.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_input_field.dart';
