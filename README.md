@@ -1,4 +1,4 @@
-# karma_app
+# pec_chat
 
 A new Flutter project.
 

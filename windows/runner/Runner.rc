@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "karma_app" "\0"
+            VALUE "FileDescription", "pec_chat" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "karma_app" "\0"
+            VALUE "InternalName", "pec_chat" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "karma_app.exe" "\0"
-            VALUE "ProductName", "karma_app" "\0"
+            VALUE "OriginalFilename", "pec_chat.exe" "\0"
+            VALUE "ProductName", "pec_chat" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

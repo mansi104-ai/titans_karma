@@ -1,6 +1,6 @@
 {
-    "name": "karma_app",
-    "short_name": "karma_app",
+    "name": "pec_chat",
+    "short_name": "pec_chat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

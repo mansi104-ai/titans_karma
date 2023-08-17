@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "11962779834",
+    "project_id": "pec-chat",
+    "storage_bucket": "pec-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11962779834:android:a7824fa052aa445cae1a83",
+        "android_client_info": {
+          "package_name": "com.example.pec_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11962779834-885p0bdn6i60kestc5m1n4odmpj383kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALqaB3ehhsAHfRVMye3Cx0UdPm6nA2L1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11962779834-885p0bdn6i60kestc5m1n4odmpj383kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
