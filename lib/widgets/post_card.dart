@@ -70,9 +70,10 @@ class _PostCardState extends State<PostCard> {
       // boundary needed for web
       decoration: BoxDecoration(
         border: Border.all(
-          color: width > webScreenSize ? secondaryColor : mobileBackgroundColor,
+          
+          color: Colors.black
         ),
-        color: mobileBackgroundColor,
+        color: Colors.white,
       ),
       padding: const EdgeInsets.symmetric(
         vertical: 10,
@@ -106,6 +107,7 @@ class _PostCardState extends State<PostCard> {
                           widget.snap['username'].toString(),
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.black
                           ),
                         ),
                       ],
@@ -114,6 +116,7 @@ class _PostCardState extends State<PostCard> {
                 ),
                 widget.snap['uid'].toString() == user.uid
                     ? IconButton(
+                      color: Colors.black,
                         onPressed: () {
                           showDialog(
                             useRootNavigator: false,
@@ -150,7 +153,7 @@ class _PostCardState extends State<PostCard> {
                             },
                           );
                         },
-                        icon: const Icon(Icons.more_vert),
+                        icon: const Icon(Icons.more_vert)
                       )
                     : Container(),
               ],
@@ -172,7 +175,7 @@ class _PostCardState extends State<PostCard> {
               alignment: Alignment.center,
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.35,
+                  height: MediaQuery.of(context).size.height * 0.5,
                   width: double.infinity,
                   child: CachedNetworkImage(
                     imageUrl: widget.snap['postUrl'].toString(),
@@ -188,26 +191,30 @@ class _PostCardState extends State<PostCard> {
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
-                AnimatedOpacity(
-                  duration: const Duration(milliseconds: 200),
-                  opacity: isLikeAnimating ? 1 : 0,
-                  child: LikeAnimation(
-                    isAnimating: isLikeAnimating,
-                    duration: const Duration(
-                      milliseconds: 400,
-                    ),
-                    onEnd: () {
-                      setState(() {
-                        isLikeAnimating = false;
-                      });
-                    },
-                    child: const Icon(
-                      Icons.favorite,
-                      color: Colors.white,
-                      size: 100,
-                    ),
-                  ),
-                ),
+AnimatedOpacity(
+  duration: const Duration(milliseconds: 200),
+  opacity: isLikeAnimating ? 1 : 0,
+  child: LikeAnimation(
+    isAnimating: isLikeAnimating,
+    duration: const Duration(milliseconds: 400),
+    onEnd: () {
+      setState(() {
+        isLikeAnimating = false;
+      });
+    },
+    child: Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white), // Add black border
+      ),
+      child: const Icon(
+        Icons.favorite,
+        color: Colors.white,
+        size: 100,
+      ),
+    ),
+  ),
+),
+
               ],
             ),
           ),
@@ -225,6 +232,7 @@ class _PostCardState extends State<PostCard> {
                         )
                       : const Icon(
                           Icons.favorite_border,
+                          color: Colors.black
                         ),
                   onPressed: () => FireStoreMethods().likePost(
                     widget.snap['postId'].toString(),
@@ -236,6 +244,7 @@ class _PostCardState extends State<PostCard> {
               IconButton(
                 icon: const Icon(
                   Icons.comment_outlined,
+                  color: Colors.black,
                 ),
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -248,6 +257,7 @@ class _PostCardState extends State<PostCard> {
               IconButton(
                   icon: const Icon(
                     Icons.send,
+                    color: Colors.black,
                   ),
                   onPressed: () {}),
               Expanded(
@@ -269,10 +279,13 @@ class _PostCardState extends State<PostCard> {
                     style: Theme.of(context)
                         .textTheme
                         .titleSmall!
-                        .copyWith(fontWeight: FontWeight.w800),
+                        .copyWith(fontWeight: FontWeight.w800, color: Colors.black),
                     child: Text(
                       '${widget.snap['likes'].length} likes',
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                      
                     )),
                 Container(
                   width: double.infinity,
@@ -281,7 +294,7 @@ class _PostCardState extends State<PostCard> {
                   ),
                   child: RichText(
                     text: TextSpan(
-                      style: const TextStyle(color: primaryColor),
+                      style: const TextStyle(color: Colors.black),
                       children: [
                         TextSpan(
                           text: widget.snap['username'].toString(),
@@ -303,7 +316,7 @@ class _PostCardState extends State<PostCard> {
                       'View all $commentLen comments',
                       style: const TextStyle(
                         fontSize: 16,
-                        color: secondaryColor,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -321,7 +334,7 @@ class _PostCardState extends State<PostCard> {
                     DateFormat.yMMMd()
                         .format(widget.snap['datePublished'].toDate()),
                     style: const TextStyle(
-                      color: secondaryColor,
+                      color: Colors.black,
                     ),
                   ),
                 ),

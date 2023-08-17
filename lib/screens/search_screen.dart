@@ -6,7 +6,7 @@ import 'package:pec_chat/utils/colors.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
-
+  
   @override
   State<SearchScreen> createState() => _SearchScreenState();
 }
@@ -18,18 +18,31 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: mobileBackgroundColor,
-        title: Form(
-          child: TextFormField(
-            controller: searchController,
-            decoration:
-                const InputDecoration(labelText: 'Search for a user...'),
-            onFieldSubmitted: (String _) {
-              setState(() {
-                isShowUsers = true;
-              });
-            },
+      backgroundColor: Colors.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(
+          backgroundColor: Colors.blue,
+          title: Container(
+            decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.blueGrey,),
+            
+            child: Form(
+              child: TextFormField(
+                controller: searchController,
+                decoration: const InputDecoration(
+                  labelText: 'Search for a user...',
+                  border: InputBorder.none, // Remove underline
+                  contentPadding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0), // Adjust padding
+                ),
+                onFieldSubmitted: (String _) {
+                  setState(() {
+                    isShowUsers = true;
+                  });
+                },
+              ),
+            ),
           ),
         ),
       ),

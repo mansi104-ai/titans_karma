@@ -10,6 +10,7 @@ import 'package:pec_chat/screens/login_screen.dart';
 import 'package:pec_chat/utils/colors.dart';
 import 'package:provider/provider.dart';
 
+
 void main() async {
   await WidgetsFlutterBinding.ensureInitialized();
 
@@ -43,8 +44,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Instagram Clone',
-        theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: mobileBackgroundColor,
+        theme: ThemeData.light().copyWith(
+          scaffoldBackgroundColor: Colors.white,
         ),
         home: StreamBuilder(
           stream: FirebaseAuth.instance.authStateChanges(),
