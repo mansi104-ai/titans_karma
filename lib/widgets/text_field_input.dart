@@ -30,7 +30,7 @@ class TextFieldInput extends StatelessWidget {
         filled: true,
         contentPadding: const EdgeInsets.all(8),
         hintStyle: TextStyle(
-          color: Colors.blueGrey
+          color: Colors.black
         )
       ),
       keyboardType: textInputType,

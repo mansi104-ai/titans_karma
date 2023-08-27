@@ -18,42 +18,41 @@ class _FeedScreenState extends State<FeedScreen> {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: width > webScreenSize
-          ? null
-      : AppBar(
-            backgroundColor: Colors.blue,
-            centerTitle: false,
-            elevation: 5,
-            // title: SvgPicture.asset(
-            //   'assets/ic_instagram.svg',
-            //   color: primaryColor,
-            //   height: 30,
-            // ),
+      backgroundColor: Colors.black,
+      // appBar: width > webScreenSize
+      //     ? null
+//       : AppBar(
+//             backgroundColor: Color.fromARGB(255, 16, 113, 7),
+//             centerTitle: false,
+//             elevation: 5,
+//             title: SvgPicture.asset(
+//               'assets/pec_chat.svg',
+//               height: 30,
+//             ),
       
-            actions: [
-              IconButton(
-                icon: const Icon(
-                  Icons.messenger_outline,
-                  color: primaryColor,
-                ),
-                onPressed: () {},
-              ),
-            ],
-              bottom: PreferredSize(
-    preferredSize: Size.fromHeight(4.0), // Height of the border
-    child: Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: Colors.black, // Color of the border
-            width: 2.0, // Width of the border
-          ),
-        ),
-      ),
-    ),
-  ),
-),
+//             actions: [
+//               IconButton(
+//                 icon: const Icon(
+//                   Icons.messenger_outline,
+//                   color: primaryColor,
+//                 ),
+//                 onPressed: () {},
+//               ),
+//             ],
+//               bottom: PreferredSize(
+//     preferredSize: Size.fromHeight(4.0), // Height of the border
+//     child: Container(
+//       decoration: BoxDecoration(
+//         border: Border(
+//           bottom: BorderSide(
+//             color: Colors.black, // Color of the border
+//             width: 2.0, // Width of the border
+//           ),
+//         ),
+//       ),
+//     ),
+//   ),
+// ),
 
           
         

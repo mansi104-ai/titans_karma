@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:pec_chat/resources/auth_methods.dart';
 import 'package:pec_chat/resources/firestore_methods.dart';
 import 'package:pec_chat/screens/login_screen.dart';
-import 'package:pec_chat/utils/colors.dart';
 import 'package:pec_chat/utils/utils.dart';
 import 'package:pec_chat/widgets/follow_button.dart';
 
@@ -73,36 +72,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
              )
         : Scaffold(
 
-           appBar: PreferredSize(
-             preferredSize: Size.fromHeight(kToolbarHeight),
-             child: Container(
-             decoration: BoxDecoration(
-
-            color: Colors.blue
-            ),
-              child: AppBar(
-                backgroundColor: Colors.transparent,
-              // Set transparent background color
-               // Remove shadow
-                 title: Text(
-              'PEC chat', style: TextStyle(
-                   fontStyle: FontStyle.italic,
-                 ) ,
-                 ),
-                centerTitle: false,
-          ),
-        ),
-      ),
+      //      appBar: PreferredSize(
+      //        preferredSize: const Size.fromHeight(kToolbarHeight),
+      //        child: Container(
+      //        decoration: const BoxDecoration(
+      //
+      //       color: Colors.blue
+      //       ),
+      //         child: AppBar(
+      //           backgroundColor: Colors.lightBlue,
+      //         // Set transparent background color
+      //          // Remove shadow
+      //            title: const Text(
+      //         'PEC chat', style: TextStyle(
+      //              fontStyle: FontStyle.italic,
+      //            ) ,
+      //            ),
+      //           centerTitle: false,
+      //     ),
+      //   ),
+      // ),
               backgroundColor: Colors.white,
 
               body:ListView(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration:  BoxDecoration(
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(10),
                           bottomLeft: Radius.circular(10)),
-                          color: Colors.blue
+                          color: Colors.teal[700]
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(16),
@@ -110,6 +109,68 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         children: [
                            Row(
                             children: [
+                              Expanded(
+                                flex: 1,
+                                child:Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: Colors.teal,
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          alignment: Alignment. topLeft,
+                                          padding: const EdgeInsets.all(10),
+                                          child: Text(
+                                            userData['username'],
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 25,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment. topLeft,
+                                          padding: const EdgeInsets.all(10),
+                                          child: Text(
+                                            userData['bio'],
+                                            style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 18
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.teal[700],
+                                              borderRadius: BorderRadius.circular(10.0),
+                                            ),
+                                            
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(10.0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                MainAxisAlignment.spaceEvenly,
+                                                children: [
+                                                  buildStatColumn(postLen, "Posts"),
+                                                  buildStatColumn(followers, "Followers"),
+                                                  buildStatColumn(following, "Following"),//-----______
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
                               CircleAvatar(
                                 backgroundColor: Colors.black,
                                 backgroundImage: NetworkImage(
@@ -117,19 +178,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                                 radius: 40,
                               ),
-                              Expanded(
-                                flex: 1,
-                                child:Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                   buildStatColumn(postLen, "Posts"),
-                                   buildStatColumn(followers, "Followers"),
-                                   buildStatColumn(following, "Following"),
-                                ],
-                               ),
-                              )
+
                             ],
                           ),
 
@@ -143,31 +192,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [ Column(
-                                  children: [
-                                    Text(
-                                    userData['username'],
-                                      style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                     Container(
-                                        alignment: Alignment. topLeft,
-                                        padding: const EdgeInsets.only(
-                                        top: 1,
-                                          ),
-                                          child: Text(
-                                             userData['bio'],
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 13
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                      ),
+                                children: [
+                                  //Column(
+                                  //children: [
+                                    // Text(
+                                    // userData['username'],
+                                    //   style: const TextStyle(
+                                    //   fontWeight: FontWeight.bold,
+                                    //     color: Colors.white,
+                                    //     fontSize: 15
+                                    //   ),
+                                    // ),
+                                    //  Container(
+                                    //     alignment: Alignment. topLeft,
+                                    //     padding: const EdgeInsets.only(
+                                    //     top: 1,
+                                    //       ),
+                                    //       child: Text(
+                                    //          userData['bio'],
+                                    //         style: const TextStyle(
+                                    //           color: Colors.white,
+                                    //           fontSize: 13
+                                    //         ),
+                                    //       ),
+                                    //     ),
+                                     // ],
+                                     // ),
                                   Row(
                                       mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -176,7 +226,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                          widget.uid
                                        ?  FollowButton(
                                           text: 'Sign Out',
-                                          backgroundColor:Colors.blue,
+                                          backgroundColor:Colors.teal,
                                           textColor: Colors.white,
                                           borderColor: Colors.black,
                                           function: () async {
@@ -195,7 +245,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       : isFollowing
                                         ? FollowButton(
                                             text: 'Unfollow',
-                                            backgroundColor: Colors.blue,
+                                            backgroundColor: Colors.teal,
                                             textColor: Colors.white,
                                             borderColor: Colors.black,
                                             function: () async {
@@ -215,7 +265,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           )
                                         : FollowButton(
                                            text: 'Follow',
-                                           backgroundColor: Colors.blue,
+                                           backgroundColor: Colors.teal,
                                            textColor: Colors.white,
                                            borderColor: Colors.black,
                                            function: () async {

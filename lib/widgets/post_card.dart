@@ -69,19 +69,21 @@ class _PostCardState extends State<PostCard> {
     return Container(
       // boundary needed for web
       decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(0),
         border: Border.all(
-          
           color: Colors.black
         ),
-        color: Colors.white,
+        color: Colors.teal,
       ),
       padding: const EdgeInsets.symmetric(
         vertical: 10,
+        horizontal: 5,
       ),
       child: Column(
         children: [
           // HEADER SECTION OF THE POST
           Container(
+            
             padding: const EdgeInsets.symmetric(
               vertical: 4,
               horizontal: 16,
@@ -269,78 +271,84 @@ AnimatedOpacity(
             ],
           ),
           //DESCRIPTION AND NUMBER OF COMMENTS
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                DefaultTextStyle(
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleSmall!
-                        .copyWith(fontWeight: FontWeight.w800, color: Colors.black),
-                    child: Text(
-                      '${widget.snap['likes'].length} likes',
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                      
-                    )),
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.only(
-                    top: 8,
-                  ),
-                  child: RichText(
-                    text: TextSpan(
-                      style: const TextStyle(color: Colors.black),
-                      children: [
-                        TextSpan(
-                          text: widget.snap['username'].toString(),
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: ' ${widget.snap['description']}',
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                InkWell(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(vertical: 4),
-                    child: Text(
-                      'View all $commentLen comments',
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => CommentsScreen(
-                        postId: widget.snap['postId'].toString(),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: Text(
-                    DateFormat.yMMMd()
-                        .format(widget.snap['datePublished'].toDate()),
-                    style: const TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ],
+         Container(
+  padding: const EdgeInsets.symmetric(horizontal: 16),
+  child: Column(
+    mainAxisSize: MainAxisSize.min,
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          DefaultTextStyle(
+            style: Theme.of(context)
+                .textTheme
+                .titleSmall!
+                .copyWith(fontWeight: FontWeight.w800, color: Colors.black),
+            child: Text(
+              '${widget.snap['likes'].length} likes',
+              style: TextStyle(
+                color: Colors.black,
+              ),
             ),
-          )
+          ),
+          InkWell(
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Text(
+                'View all $commentLen comments',
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => CommentsScreen(
+                  postId: widget.snap['postId'].toString(),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+      Container(
+        width: double.infinity,
+        padding: const EdgeInsets.only(
+          top: 8,
+        ),
+        child: RichText(
+          text: TextSpan(
+            style: const TextStyle(color: Colors.black),
+            children: [
+              TextSpan(
+                text: widget.snap['username'].toString(),
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              TextSpan(
+                text: ' ${widget.snap['description']}',
+              ),
+            ],
+          ),
+        ),
+      ),
+      Container(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: Text(
+          DateFormat.yMMMd()
+              .format(widget.snap['datePublished'].toDate()),
+          style: const TextStyle(
+            color: Colors.black,
+          ),
+        ),
+      ),
+    ],
+  ),
+)
+
         ],
       ),
     );

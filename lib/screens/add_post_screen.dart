@@ -29,7 +29,7 @@ Future<void> _selectImage(BuildContext parentContext) async {
           Container(
              // Background color for the "Create a Post" block
             padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.teal[700]),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -167,7 +167,7 @@ Future<void> _selectImage(BuildContext parentContext) async {
         height: 50,
         padding: const EdgeInsets.all(8), // Adjust padding here
         decoration: BoxDecoration(
-          color: Colors.blueAccent,
+          color: Colors.teal,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
@@ -194,7 +194,7 @@ Future<void> _selectImage(BuildContext parentContext) async {
 
         : Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.blueAccent,
+              backgroundColor: Colors.teal,
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
                 color: Colors.black,
