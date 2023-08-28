@@ -22,7 +22,7 @@ void main() async {
           appId: "1:11962779834:android:a7824fa052aa445cae1a83",
           messagingSenderId: "11962779834",
           projectId: "pec-chat",
-          storageBucket: 'pec-chat.appspot.com'),
+          storageBucket: 'pec-chat.com'),
     );
   } else {
     await Firebase.initializeApp();
