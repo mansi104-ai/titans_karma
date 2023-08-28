@@ -7,6 +7,8 @@ import 'package:pec_chat/responsive/responsive_layout.dart';
 import 'package:pec_chat/responsive/web_screen_layout.dart';
 import 'package:pec_chat/screens/login_screen.dart';
 import 'package:pec_chat/utils/colors.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -19,8 +21,9 @@ void main() async {
       options: const FirebaseOptions(
           apiKey: "AIzaSyCv-6HKeFZh1X4IfoQHtUwMzALGsa5OcxE",
           appId: "1:11962779834:android:a7824fa052aa445cae1a83",
+          messagingSenderId: "11962779834",
           projectId: "pec-chat",
-          storageBucket: 'pec-chat.com'),
+          storageBucket: 'pec-chat.appspot.com'),
     );
   } else {
     await Firebase.initializeApp();
