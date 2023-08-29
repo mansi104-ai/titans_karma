@@ -109,7 +109,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-4. Enter your API in `/.env`
+4. Enter your CREDENTIALS in `/main.dart`
    ```bash
     apiKey: 'YOUR API KEY',
     authDomain: 'YOUR URL',
