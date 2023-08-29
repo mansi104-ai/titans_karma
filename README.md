@@ -14,7 +14,7 @@
     Shearing skills -n- Celebrating Success ✨
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/15npijRBBu_C_8RcDOkOm34US6frD4VZi/view?usp=share_link">View Demo</a>
+    <a href="https://drive.google.com/file/d/1yi6GFPsRP-p2yqF9Yg4VbqglFkQJzKGx/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/ideathon-2023/team-3/issues">Report Bug</a>
     ·
