@@ -139,7 +139,7 @@ To get a local copy up and running follow these simple example steps.
 
 Here are a few useful examples of how PEC-CHAT can be used:
 
-1) Direct Messaging: PEC-CHAT's direct messaging feature, often referred to as "DMs," allows users to send private messages to each other. Users can share text messages, photos, videos, and posts from their feed via DMs.
+1)Direct Messaging: PEC-CHAT's direct messaging feature, often referred to as "DMs," allows users to send private messages to each other. Users can share text messages, photos, videos, and posts from their feed via DMs.
 
 2)Message Requests: To maintain privacy, PEC-CHAT users can receive message requests from users they don't follow. This enables users to accept or decline chat invitations from unknown individuals.
 
