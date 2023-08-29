@@ -19,7 +19,9 @@ void main() async {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
           apiKey: "AIzaSyCv-6HKeFZh1X4IfoQHtUwMzALGsa5OcxE",
+          authDomain: "pec-chat.firebaseapp.com",
           appId: "1:11962779834:android:a7824fa052aa445cae1a83",
+          databaseURL: "https://pec-chat-default-rtdb.asia-southeast1.firebasedatabase.app",
           messagingSenderId: "11962779834",
           projectId: "pec-chat",
           storageBucket: 'pec-chat.appspot.com'),
