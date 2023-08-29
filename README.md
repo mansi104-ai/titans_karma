@@ -11,12 +11,12 @@
   <h3 align="center">PEC-CHAT</h3>
 
   <p align="center">
-    Shearing skills -n- Celebrating Success ✨
+    Shearing skills -n- Celebrating ✨
     <br />
     <br />
     <a href="https://drive.google.com/file/d/15npijRBBu_C_8RcDOkOm34US6frD4VZi/view?usp=share_link">View Demo</a>
     ·
-    <a href="https://github.com/ideathon-2023/team-3/issues">Report Bug</a>
+    <a href="https://github.com/GopalVerma1303/VogueGenie/issues">Report Bug</a>
     ·
     <a href="https://github.com/GopalVerma1303/VogueGenie/issues">Request Feature</a>
   </p>
@@ -111,13 +111,13 @@ This is an example of how to list things you need to use the software and how to
    ```
 4. Enter your API in `/.env`
    ```bash
-  apiKey: 'YOUR API KEY',
-  authDomain: 'YOUR URL',
-  appId: 'YOUR APP ID',
-  databaseURL: 'YOUR URL',
-  messagingSenderId: 'YOUR ID',
-  projectId: 'YOUR PROJECT ID',
-  storageBucket: 'YOUR URL',
+    apiKey: 'YOUR API KEY',
+    authDomain: 'YOUR URL',
+    appId: 'YOUR APP ID',
+    databaseURL: 'YOUR URL',
+    messagingSenderId: 'YOUR ID',
+    projectId: 'YOUR PROJECT ID',
+    storageBucket: 'YOUR URL'
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
