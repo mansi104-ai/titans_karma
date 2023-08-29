@@ -89,27 +89,19 @@ Our fashion AI assistant, powered by GenAI, addresses this challenge by generati
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
 
-1. Get a free OPENAI API Key at [https://openai.com/](https://openai.com/)
+1. Get a free Firebase credentials at [https://firebase.google.com](https://firebase.google.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/GopalVerma1303/VogueGenie.git
+   git clone https://github.com/ideathon-2023/team-3.git
    ```
-3. Install NPM packages - in both client and server directories
+3. Install Flutter packages - in the root directory
    ```sh
-   npm install
+   flutter pub get
    ```
-4. Enter your CREDENTIALS in `/main.dart`
+4. Enter your API in `/.env`
    ```bash
     apiKey: 'YOUR API KEY',
     authDomain: 'YOUR URL',
@@ -119,6 +111,10 @@ This is an example of how to list things you need to use the software and how to
     projectId: 'YOUR PROJECT ID',
     storageBucket: 'YOUR URL'
    ```
+5. Enter following command to launch on Web(Chrome)
+    ```bash
+    flutter run -d chrome --web-renderer html
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
