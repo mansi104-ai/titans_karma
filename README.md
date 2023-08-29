@@ -111,14 +111,13 @@ This is an example of how to list things you need to use the software and how to
    ```
 4. Enter your API in `/.env`
    ```bash
-    OPENAI_API_KEY = 'ENTER YOUR API'
-    MONGO_URL='ENTER YOUR API'
-    SESSION_SECRET='ENTER YOUR API'
-    JWT_SECRET='ENTER YOUR API'
-    CLOUDINARY_CLOUD_NAME='ENTER YOU NAME'
-    CLOUDINARY_API_KEY='ENTER YOU API'
-    CLOUDINARY_API_SECRET='ENTER YOU API'
-    CLOUDINARY_URL='ENTER YOUR API'
+  apiKey: "YOUR API KEY",
+  authDomain: "YOUR URL",
+  appId: "YOUR APP ID",
+  databaseURL: "YOUR URL",
+  messagingSenderId: "YOUR ID",
+  projectId: "YOUR PROJECT ID",
+  storageBucket: 'YOUR URL'),
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
